@@ -1,1 +1,10 @@
-ls -la devops/
+pipeline{
+    agent any
+    stages{
+        stage('checks'){
+          steps {
+            sh 'ls -la devops/'
+          }
+        }
+    }
+}
